@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Chatsapp</string>
+
+    <string name="hello_blank_fragment_calls">Call list fragment</string>
+    <string name="hello_blank_fragment_chats">Chat list fragment</string>
+    <string name="hello_blank_fragment_contacts">Contact list fragment</string>
+
 </resources>
