@@ -14,6 +14,8 @@ import android.view.MenuInflater;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import mx.hercarr.chatsapp.R;
 import mx.hercarr.chatsapp.adapters.MainViewPagerAdapter;
 import mx.hercarr.chatsapp.fragments.CallListFragment;
@@ -22,28 +24,25 @@ import mx.hercarr.chatsapp.fragments.ContactListFragment;
 
 public class MainActivity extends AppCompatActivity {
 
+    @BindView(R.id.toolbar)
     Toolbar toolbar;
+    @BindView(R.id.viewpager)
     ViewPager viewPager;
+    @BindView(R.id.tabLayout)
     TabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
         init();
     }
 
     private void init() {
-        findViews();
         setupToolbar();
         setupViewPager();
         setupTabLayout();
-    }
-
-    private void findViews() {
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        viewPager = (ViewPager) findViewById(R.id.viewpager);
-        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
     }
 
     private void setupToolbar() {

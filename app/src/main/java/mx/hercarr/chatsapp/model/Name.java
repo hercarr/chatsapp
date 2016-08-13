@@ -30,4 +30,8 @@ public class Name {
         this.last = last;
     }
 
+    public String getFullName() {
+        return title + " " + first + " " + last;
+    }
+
 }
